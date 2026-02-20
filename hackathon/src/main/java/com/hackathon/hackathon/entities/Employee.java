@@ -33,6 +33,7 @@ public class Employee {
 
     @Enumerated(EnumType.STRING)
     @Column(name = "availability_status")
+    @Builder.Default
     private AvailabilityStatus availabilityStatus = AvailabilityStatus.FREE;
 
     @Column(name = "created_at", updatable = false)
