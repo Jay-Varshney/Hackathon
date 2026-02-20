@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Manager Dashboard</title>
+
+    <link rel="stylesheet" th:href="@{/css/dashboard.css}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div class="sidebar">
+    <h2>Company Panel</h2>
+    <ul>
+        <li>Dashboard</li>
+        <li>Employees</li>
+        <li>Projects</li>
+        <li>Logout</li>
+    </ul>
+</div>
+
+<div class="main-content">
+    <h1>Manager Dashboard</h1>
+
+    <!-- Stats -->
+    <div class="cards">
+        <div class="card">
+            <h3>Total Employees</h3>
+            <p id="totalEmployees">--</p>
+        </div>
+        <div class="card">
+            <h3>Total Projects</h3>
+            <p id="totalProjects">--</p>
+        </div>
+        <div class="card">
+            <h3>Available Projects</h3>
+            <p id="availableProjects">--</p>
+        </div>
+    </div>
+
+    <!-- Charts -->
+    <div class="charts">
+        <div class="chart-box">
+            <h3>Project Availability</h3>
+            <canvas id="projectPie"></canvas>
+        </div>
+
+        <div class="chart-box">
+            <h3>Skills Distribution</h3>
+            <canvas id="skillsBar"></canvas>
+        </div>
+    </div>
+
+    <!-- Teams -->
+    <div class="teams">
+        <h3>Recently Matched Teams</h3>
+        <div id="teamsContainer"></div>
+    </div>
+</div>
+
+<script th:src="@{/js/dashboard.js}"></script>
+</body>
+</html>
