@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Company Manager Dashboard</title>
+
+    <!-- <link rel="stylesheet" href="../static/css/dashboard.css"> -->
+    <link rel="stylesheet" href="/css/dashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<!-- Sidebar -->
+<div class="sidebar">
+    <h2>CorpPanel</h2>
+    <ul>
+        <li class="active">Dashboard</li>
+        <li>Employees</li>
+        <li>Projects</li>
+        <li>Teams</li>
+        <li>Logout</li>
+    </ul>
+</div>
+
+<!-- Main -->
+<div class="main">
+
+    <!-- Topbar -->
+    <div class="topbar">
+        <h1>Manager Dashboard</h1>
+        <span class="user">👤 Manager</span>
+    </div>
+
+    <!-- KPI Cards -->
+    <div class="cards">
+        <div class="card">
+            <h4>Total Employees</h4>
+            <p>42</p>
+        </div>
+        <div class="card">
+            <h4>Active Projects</h4>
+            <p>12</p>
+        </div>
+        <div class="card">
+            <h4>Available Employees</h4>
+            <p>8</p>
+        </div>
+        <div class="card">
+            <h4>Utilization</h4>
+            <p>81%</p>
+        </div>
+    </div>
+
+    <!-- Charts -->
+    <div class="charts">
+        <div class="chart-box">
+            <h3>Skills Distribution</h3>
+            <canvas id="skillsChart"></canvas>
+        </div>
+
+        <div class="chart-box">
+            <h3>Project Allocation</h3>
+            <canvas id="projectChart"></canvas>
+        </div>
+    </div>
+
+    <!-- Employees Table -->
+    <div class="table-container">
+        <h3>Employees Overview</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Role</th>
+                    <th>Skills</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody id="employeeTable">
+                <!-- JS injects rows -->
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+<script src="/js/dashboard.js"></script>
+</body>
+</html>
